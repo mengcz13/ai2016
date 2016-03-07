@@ -98,7 +98,7 @@ void Sudoku::solve_unit(int x, int y) {
 		return;
 	}
 	else {
-		for (int i = 0; i <= 9; ++i) {
+		for (int i = 1; i <= 9; ++i) {
 			value(x, y) = '0' + i;
 			if (iflegal(x, y)) {
 				if (y == size - 1)
