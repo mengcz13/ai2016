@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include "solver.h"
-//#define DEBUG
+
 using namespace std;
 
 Solver::Solver() {
@@ -79,7 +79,7 @@ void Solver::insert(Playarea& playarea) {
 			playarea.g_value = 0;
 		else
 			playarea.g_value = playarea_array.at(playarea.parent).g_value + 1;
-		playarea.h_value = diff_value(playarea);
+		playarea.h_value = diff_value(playarea); // Use number of digits no in proper position as h function
 		playarea.f_value = playarea.g_value + playarea.h_value;
 		int rank = playarea_array.size();
 		playarea_array.push_back(playarea);
@@ -106,7 +106,7 @@ void Solver::insert(Playarea& playarea) {
 }
 
 void Solver::expand(int rank) {
-	Playarea top = playarea_array.at(rank);
+	Playarea top = playarea_array.at(rank); // Should not use reference for that the position of vector in memory may change
 	int zi = 0, zj = 0;
 	bool find = false;
 	for (zi = 0; zi < Playarea::SIZE; ++zi) {
@@ -134,7 +134,7 @@ void Solver::expand(int rank) {
 	}
 }
 
-int Solver::diff_value(Playarea& playarea) {
+int Solver::diff_value(Playarea& playarea) { // Use number of digits no in proper position as h function
 	int sum = 0;
 	unsigned long long pa = playarea.area;
 	unsigned long long Aa = ANS.area;
