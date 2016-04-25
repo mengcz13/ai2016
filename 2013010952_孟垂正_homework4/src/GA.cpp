@@ -175,7 +175,13 @@ void GATspSolver::mutation(vector<int>& route) {
 	while (q == p) {
 		q = rand() % (citynum - 1) + 1;
 	}
-	swap(route.at(p), route.at(q));
+	if (p > q)
+		swap(p, q);
+	while (p < q) {
+		swap(route.at(p), route.at(q));
+		++p;
+		--q;
+	}
 }
 
 void GATspSolver::shuffle(vector<int>& route) {

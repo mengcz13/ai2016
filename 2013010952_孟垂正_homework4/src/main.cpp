@@ -1,10 +1,10 @@
 #include "GA.h"
 using namespace std;
 
-const double CR = 0.9;
+const double CR = 0.9999;
 const double MR = 0.01;
 const int POOLSIZE = 100;
-const int MAXGEN = 100000;
+const int MAXGEN = 1000000;
 
 int main(int argc, char** argv) {
 	if (argc != 3)
