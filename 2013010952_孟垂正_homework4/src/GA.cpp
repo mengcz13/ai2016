@@ -97,7 +97,7 @@ void GATspSolver::save(string filename) {
 	ofstream output(filename.c_str());
 	for (int i = 0; i < citynum + 1; ++i)
 		output << city_name_list.at(shortest_route.at(i)) << ' ';
-	output << route_length(shortest_route);
+	output << route_length(shortest_route) << endl;
 	output.close();
 }
 
