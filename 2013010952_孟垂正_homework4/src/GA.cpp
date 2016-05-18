@@ -134,7 +134,7 @@ void GATspSolver::random_select() {
 	GApool = backupGApool;
 }
 
-void GATspSolver::crossover(vector<int>& route1, vector<int>& route2) {
+void GATspSolver::crossover(vector<int>& route1, vector<int>& route2) { // crossover method: normal cross(1st method in ppt)
 	int crossstart = rand() % (citynum - 2) + 1;
 
 	hash_for_crossover.assign(citynum, false);
@@ -169,7 +169,7 @@ void GATspSolver::crossover(vector<int>& route1, vector<int>& route2) {
 	route2 = sonroute2;
 }
 
-void GATspSolver::mutation(vector<int>& route) {
+void GATspSolver::mutation(vector<int>& route) { // mutation method: reverse between i and j
 	int p = rand() % (citynum - 1) + 1;
 	int q = p;
 	while (q == p) {
