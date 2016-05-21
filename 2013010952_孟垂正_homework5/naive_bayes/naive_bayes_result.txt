@@ -1,0 +1,10 @@
+rate of 0 patch: 0.948718
+rate of 1 patch: 1.000000
+rate of 2 patch: 0.974359
+rate of 3 patch: 1.000000
+rate of 4 patch: 0.923077
+rate of 5 patch: 0.974359
+rate of 6 patch: 1.000000
+rate of 7 patch: 0.948718
+rate of 8 patch: 0.948718
+rate of 9 patch: 0.948718

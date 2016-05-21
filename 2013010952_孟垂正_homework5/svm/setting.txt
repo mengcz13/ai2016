@@ -1,0 +1,4 @@
+atheism ../data/c1_atheism
+sci ../data/c2_sci.crypt
+politics ../data/c3_talk.politics.guns
+hardware ../data/c4_comp.sys.mac.hardware
